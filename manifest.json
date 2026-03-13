@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "SourceCalc - 1688 Profit Calculator",
+  "version": "0.1.0",
+  "description": "Instantly calculate your profit margin when sourcing from 1688 for Amazon, Shopify, and other platforms. See real costs including shipping, customs, and fees.",
+  "permissions": ["storage", "activeTab"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.1688.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
