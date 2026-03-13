@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SourceCalc - 1688 Profit Calculator for Cross-Border Sellers</title>
+<meta name="description" content="Instantly calculate profit margins when sourcing from 1688.com. Includes shipping, customs, and platform fees for Amazon, Shopify, Temu and more.">
+<style>
+  :root { --purple: #6366f1; --purple-dark: #4f46e5; --green: #16a34a; --bg: #fafafa; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: var(--bg); line-height: 1.7; }
+
+  .hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(135deg, #eef2ff, #faf5ff);
+  }
+  .hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 16px; }
+  .hero h1 span { background: linear-gradient(135deg, var(--purple), #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 18px; color: #555; max-width: 600px; margin: 0 auto 32px; }
+  .cta {
+    display: inline-block;
+    background: var(--purple);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.2s;
+  }
+  .cta:hover { background: var(--purple-dark); }
+  .badge { display: inline-block; margin-top: 16px; font-size: 13px; color: #888; }
+
+  .features {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+  .feature {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .feature h3 { font-size: 16px; margin-bottom: 8px; color: var(--purple); }
+  .feature p { font-size: 14px; color: #666; }
+
+  .how-it-works {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .how-it-works h2 { font-size: 28px; margin-bottom: 32px; }
+  .steps { text-align: left; }
+  .step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--purple);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step-text h4 { font-size: 15px; margin-bottom: 4px; }
+  .step-text p { font-size: 13px; color: #666; }
+
+  .platforms {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  .platforms h2 { font-size: 24px; margin-bottom: 24px; }
+  .platform-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .platform-tag {
+    padding: 8px 20px;
+    background: #f3f4f6;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .cta-section h2 { font-size: 28px; margin-bottom: 16px; }
+  .cta-section p { color: #666; margin-bottom: 24px; }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #aaa;
+    border-top: 1px solid #eee;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Stop guessing.<br><span>Know your profit.</span></h1>
+  <p>SourceCalc calculates your real profit margin when sourcing from 1688.com. Shipping, customs, platform fees - all in one click.</p>
+  <a href="#" class="cta">Add to Chrome - Free</a>
+  <div class="badge">Free during beta. No signup required.</div>
+</div>
+
+<div class="features">
+  <div class="feature">
+    <h3>Auto-Detect Prices</h3>
+    <p>Automatically reads the product price from any 1688.com product page. No copy-pasting needed.</p>
+  </div>
+  <div class="feature">
+    <h3>Full Cost Chain</h3>
+    <p>Sourcing cost + international shipping + customs duty + platform fees = your real total cost per unit.</p>
+  </div>
+  <div class="feature">
+    <h3>7 Markets</h3>
+    <p>USA, UK, Germany, Japan, Australia, UAE, Saudi Arabia. Sea freight and air freight estimates included.</p>
+  </div>
+  <div class="feature">
+    <h3>6 Platforms</h3>
+    <p>Amazon FBA, Amazon FBM, Shopify, Temu, eBay, TikTok Shop. Accurate fee calculations for each.</p>
+  </div>
+  <div class="feature">
+    <h3>Real-Time Exchange Rates</h3>
+    <p>CNY/USD exchange rate updated automatically. No more Googling the latest rate.</p>
+  </div>
+  <div class="feature">
+    <h3>Instant ROI</h3>
+    <p>See profit per unit, margin %, ROI %, total investment, and total profit at a glance.</p>
+  </div>
+</div>
+
+<div class="how-it-works">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Browse 1688.com</h4>
+        <p>Go to any product page on 1688.com as you normally would. SourceCalc appears automatically.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Enter your selling price</h4>
+        <p>The sourcing price is auto-detected. Just enter what you plan to sell it for and pick your market/platform.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>See your real profit</h4>
+        <p>Instantly see the complete cost breakdown and your actual profit margin. Green = profitable, Red = losing money.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="platforms">
+  <h2>Supported Platforms</h2>
+  <div class="platform-list">
+    <span class="platform-tag">Amazon FBA</span>
+    <span class="platform-tag">Amazon FBM</span>
+    <span class="platform-tag">Shopify</span>
+    <span class="platform-tag">Temu</span>
+    <span class="platform-tag">eBay</span>
+    <span class="platform-tag">TikTok Shop</span>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Ready to source smarter?</h2>
+  <p>Join cross-border sellers who calculate before they commit.</p>
+  <a href="#" class="cta">Add to Chrome - Free</a>
+</div>
+
+<footer>
+  SourceCalc v0.1 Beta | Built for cross-border e-commerce sellers
+</footer>
+
+</body>
+</html>
